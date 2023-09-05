@@ -16,9 +16,9 @@ public class Client {
     @Id
     @SequenceGenerator(name = "CLIENT_SEQ", sequenceName = "CLIENT_SEQ")
     @GeneratedValue( generator = "CLIENT_SEQ", strategy = GenerationType.SEQUENCE)
-    private Long cdClient;
+    Long cdClient;
 
-    private String telephone;
+    String telephone;
 
     @Column(nullable = false, unique = true)
     private String email;

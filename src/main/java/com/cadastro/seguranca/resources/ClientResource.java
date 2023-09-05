@@ -22,9 +22,10 @@ public class ClientResource {
 
     private final ClientService service;
 
+     HttpHeaders headers = new HttpHeaders();
+
     @PostMapping
     public ResponseEntity<String> save(@RequestBody @Validated ClientDTO clientDTO) {
-        HttpHeaders headers = new HttpHeaders();
         service.save(clientDTO);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
